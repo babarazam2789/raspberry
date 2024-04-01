@@ -1,0 +1,191 @@
+1. Download and Install Raspberry Pi Imager
+The first step is to download the Raspberry Pi Imager from the official Raspberry Pi website. This tool will allow you to choose an OS, have it downloaded automatically, and write it to the SD card of your choice.
+
+Do not download files from third-party websites as they may be malicious. Only use trusted sources.
+The imager tool is available on Windows, macOS, and Ubuntu. Images shown will be from a Mac, but the tool will work the same across the supported platforms.
+
+
+Download the Raspberry Pi Imager for your operating system and follow the installation instructions.
+Launch Raspberry Pi Imager
+ 
+2. Raspberry Pi Imager
+
+Step 2: Choose OS
+Several operating systems are available for selection within the Raspberry Pi Imager, but we will focus on Raspberry Pi OS.
+
+There are 3 versions of Raspberry Pi OS available. We will briefly touch on each one but we will be using Raspberry Pi OS (32-bit) for this guide.
+
+i. Select CHOOSE OS
+ 
+
+OS Selection within Raspberry Pi Imager
+
+Raspberry Pi OS (32-bit) Lite: This version provides the bare essentials to get you up and running. There is no Graphical User Interface (GUI) with this image and the size is around 0.4 GB.
+Raspberry Pi OS (32-bit): This version includes a GUI and has basic software installed. The size of this image is around 1.1 GB.
+Raspberry Pi OS Full (32-bit): This version includes a GUI and more software installed than the non-full version. The size of this image is around 2.5 GB Select Raspberry Pi OS (32-bit)
+ 
+OS Selected in Raspberry Pi Imager
+
+Step 3: Choose SD Card
+You’ll now need your SD card connected to your computer to copy over the OS you chose.
+Select CHOOSE SD CARD and select the SD card you have connected to your computer.
+ 
+Select SD Card
+You’re now ready to begin writing the OS to your SD card.
+ 
+OS and SD Card selected
+
+Step 4: Write to SD Card
+This step will write the selected OS to the SD card and run a verification that the copy was successful.
+
+i. Select WRITE
+ 
+Write Process Started
+The writing process will vary depending on the OS you selected. Typically, this will only take a few minutes.
+ 
+ii.Verifying Write
+The verify process only takes about a minute to complete.
+ 
+Write Successful .The OS has now been copied to your SD card. You are now ready to move on to booting your Raspberry Pi.
+
+iii.Select CONTINUE
+
+Step 5: Booting Your Raspberry Pi
+
+Insert your microSDHC card into your Raspberry Pi. Then, hook up your Raspberry Pi to power, keyboard, mouse, and monitor.
+Note: There is a way to configure the Raspberry Pi OS with only power and a network connection. This is called a headless install and is a more advanced technique that will not be covered in this guide.
+
+i. You should be brought directly into the Raspberry Pi OS with a Welcome to Raspberry Pi dialog on the display.
+
+We’ll step through this quick setup and then you will be on your way!
+ii. Select Next
+ 
+Welcome to Raspberry Pi
+The next screen will be to set your country.
+iii. Choose Your Country Choose Your Language Choose Your Timezone
+iv. Select the checkboxes if you are using the English language and an English keyboard
+v. Click Next
+ 
+
+vi. Set Country
+vii. The next screen will prompt you to change your password. The default username is “pi” and the default password is “raspberry”
+It is best practice to enable strong passwords for your accounts.
+Enter a new password Confirm the new password Press Next
+ 
+viii. Change Password
+The next screen will ask you if there is a black border around the desktop. The desktop should take up the entire screen. If it doesn’t, Raspberry Pi OS can make the adjustment to fill the black space. This change will take effect when the Raspberry Pi is restarted.
+
+ix. Select the checkbox if the screen shows a black border around the desktop.
+Press Next
+ 
+x. Set Up Screen 
+
+
+The next screen will prompt you to connect the Raspberry Pi to a wireless network. If no internet connection is available you can press the skip button to proceed past this step. If you have a wired connection you will not see this step.
+
+xi .Select a Wireless Network Press Next
+ 
+Select Wireless Network
+
+The next screen will prompt you to enter the wireless network password. You can uncheck “hide characters” to see the characters you are typing.
+
+xii. Enter Wireless Network Password Press Next
+ 
+Wireless Network Password
+
+The next screen will ask you if you’d like to have the operating system and applications checked and updated if necessary. An internet connection is required to complete this step. Press “Skip” if you’d like to continue without checking.
+Note: The time to complete this step will vary based on your internet connection and specs of your Raspberry Pi.
+
+xiii. Press Next
+ 
+Update Software
+
+xiv. A popup will indicate when your system is up to date.
+ 
+xv. System is up to date
+
+The last screen will let you know that setup is complete and your Raspberry Pi is good to go. Feel free to restart your Raspberry Pi for any system changes to take effect.
+ 
+Setup Complete
+Installation of Node JS on Raspbian 
+What is NodeJS? 
+Nodejs or Node is an open-source and cross-platform runtime environment for executing JavaScript code outside of a browser. We often use Node to build backend services, also called APIs (Application Programming Interfaces). These services power our client application, like a web app running inside a web browser or a mobile app running on a mobile device. These client apps are simply what a user sees and interacts with. They are just the surface and need to talk to some services sitting on the server or in the cloud to store data, send emails or push notifications, kick-off workflows, and so on. Node is ideal for building highly scalable dataintensive and real-time back-end services that power our client applications. 
+
+What is NPM? 
+
+On the other hand, NPM stands for Node Package Manager. You can think of NPM as two things: 
+1. An Online platform 
+2. A Command-Line tool 
+
+
+NPM, as an online platform, is a place where developers can publish and share tools written in JavaScript. Anyone can search and use tools available on this online platform. You can find tools for use in the browser, server, or even the command line. NPM, as a command-line tool, helps developers interact with the NPM online platform. You can use NPM to install and uninstall packages available on the NPM online platform. NPM is also used to manage package versions and dependencies.
+
+Install NodeJS and NPM From the NodeSource Repo 
+NodeSource is a platform focused on helping developers and organizations run productionready NodeJS apps by providing enterprise-grade Node support. It maintains an APT repo where you can download the latest version of NodeJS on your system. Follow the steps below. Before we begin installing NodeJS to our Raspberry Pi, let us first update the packages running on our operating system. We can update the package list and upgrade any existing packages by using the following two commands. 
+
+1. sudo apt update 
+2. Sudo apt upgrade
+
+Step 1: Enable the NodeSource Repository 
+Launch the Terminal and execute the command below. In our case, we are connecting to the Raspberry Pi over SSH.
+ 
+ 
+Step 2: Install NodeJS 
+When done, run the command below to install NodeJS on your system.
+
+ 
+ 
+
+Step 3: Verify Installation
+When done, verify NodeJS and NPM installation by running the version command below.
+
+2. Working with Node Js 
+Raspberry Pi 3: Node.js Hello world 
+The first thing we will do is opening a command line. Once you do it, simply type the following command and press Enter:  
+
+node 
+This should open the Node.js interpreter, where we can send commands. Figure illustrates the expected result after sending the previous command.
+
+Creating Node.js Application 
+
+Step 1 - Import Required Module 
+We use the require directive to load the http module and store the returned HTTP instance into an http variable as follows – 
+var http = require("http");
+
+Step 2 - Create Server 
+We use the created http instance and call http.createServer() method to create a server instance and then we bind it at port 8081 using the listen method associated with the server instance. Pass it a function with parameters request and response. Write the sample implementation to always return "Hello World". 
+
+http.createServer(function (request, response) { 
+// Send the HTTP header 
+// HTTP Status: 200 : OK 
+// Content Type: text/plain response.writeHead(200, {'Content-Type': 'text/plain'}); 
+// Send the response body as "Hello World" 
+response.end('Hello World\n'); }).listen(8081); 
+
+// Console will print the message 
+console.log('Server running at http://127.0.0.1:8081/');
+
+The above code is enough to create an HTTP server which listens, i.e., waits for a request over 8081 port on the local machine. 
+
+Step 3 - Testing Request & Response 
+Let's put step 1 and 2 together in a file called main.js and start our HTTP server as shown below –
+
+var http = require("http"); 
+http.createServer(function (request, response) { 
+// Send the HTTP header 
+// HTTP Status: 200 : OK // Content Type: text/plain 
+response.writeHead(200, {'Content-Type': 'text/plain'}); 
+
+// Send the response body as "Hello World" 
+response.end('Hello World\n'); 
+}).listen(8081); 
+// Console will print the message console.log('Server running at http://127.0.0.1:8081/');
+
+Now execute the main.js to start the server as follows -
+
+– $ node main.js
+
+Verify the Output. Server has started. 
+Server running at http://127.0.0.1:8081/ 
+Make a Request to the Node.js Server 
+Open http://127.0.0.1:8081/ in any browser and observe the following result.
